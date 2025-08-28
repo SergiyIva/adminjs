@@ -11,6 +11,10 @@ try {
   if (!(error instanceof ReferenceError)) {
     throw error
   }
+} finally {
+  if (!globalAny) {
+    globalAny = {}
+  }
 }
 
 /**
